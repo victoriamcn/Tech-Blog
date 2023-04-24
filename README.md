@@ -15,7 +15,8 @@ A CMS-style blog site similar to a Wordpress site, where developers can publish 
 ## Table of Contents
 - [User Story](#user-story)
 - [Installation and Usage](#installation-and-usage)
-- [npm packages](#npm-packages)
+- [MVC Paradigm](#mvc-Paradigm)
+- [Other npm Packages](#other-npm-packages)
 - [Contributing](#contributing)
 - [Questions](#questions)
 - [License](#license)
@@ -43,10 +44,17 @@ DB_USER='example'
 9. 
 10. 
 
-## npm packages
-- [mysql2](https://www.npmjs.com/package/mysql2)
-- [sequelize](https://www.npmjs.com/package/sequelize)
-- [dotenv](https://www.npmjs.com/package/dotenv)
+## MVC Paradigm
+- Model: [mysql2](https://www.npmjs.com/package/mysql2) packages to connect to a MySQL database.
+- Model: [sequelize](https://www.npmjs.com/package/sequelize) packages to connect to a MySQL database.
+- View: [express-handlebars](https://www.npmjs.com/package/express-handlebars).
+- Controller: Created an Express.js API.
+
+## Other npm Packages
+- [dotenv](https://www.npmjs.com/package/dotenv) package to use environment variables
+- [bcrypt](https://www.npmjs.com/package/bcrypt) package to hash passwords
+- [connect-session](https://www.npmjs.com/package/express-session) package to add authentication
+- [connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize) package to add authentication
 
 ## Contributing
 To contribute to this project, you may create a git fork.
