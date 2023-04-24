@@ -16,7 +16,6 @@ A CMS-style blog site similar to a Wordpress site, where developers can publish 
 - [User Story](#user-story)
 - [Installation and Usage](#installation-and-usage)
 - [npm packages](#npm-packages)
-- [Demo](#demo)
 - [Contributing](#contributing)
 - [Questions](#questions)
 - [License](#license)
@@ -49,10 +48,6 @@ DB_USER='example'
 - [sequelize](https://www.npmjs.com/package/sequelize)
 - [dotenv](https://www.npmjs.com/package/dotenv)
 
-## Demo
-Click to watch the [demo on YouTube]().
-
-
 ## Contributing
 To contribute to this project, you may create a git fork.
 
@@ -66,7 +61,7 @@ To view my other projects, you may visit my Git Hub profile: [victoriamcn](https
 
 This project is licensed under MIT.
 - [Click](https://pitt.libguides.com/openlicensing/MIT#:~:text=Users%20of%20software%20using%20an,and%20the%20X%20Windows%20System.) here to view the license documentation or,
-- Go to the [license file]().
+- Go to the [license file](https://github.com/victoriamcn/Tech-Blog/blob/main/LICENSE) with in this repository.
 
 ## Credits
 
