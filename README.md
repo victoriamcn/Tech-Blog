@@ -24,6 +24,9 @@ A CMS-style blog site similar to a Wordpress site, where developers can publish 
 
 ## User Story
 ```
+AS A developer who writes about tech
+I WANT a CMS-style blog site
+SO THAT I can publish articles, blog posts, and my thoughts and opinions
 ```
 ## Installation and Usage
 1. Clone this repository to your local computer.
