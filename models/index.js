@@ -9,24 +9,24 @@ User.hasMany(BlogPost, {
   });
   
 BlogPost.belongsTo(User, {
-foreignKey: 'user_id'
+    foreignKey: 'user_id'
 });
 
 //USER HAS MANY COMMENTS
 User.hasMany(Comment, {
-foreignKey: 'user_id',
-onDelete: 'CASCADE'
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
 });
 
 Comment.belongsTo(User, {
-foreignKey: 'user_id'
+    foreignKey: 'user_id'
 });
 
 //BLOGPOST HAS MANY COMMENTS
 BlogPost.hasMany(Comment, {
     foreignKey: 'user_id',
     onDelete: 'CASCADE'
-    });
+});
     
 Comment.belongsTo(BlogPost, {
 foreignKey: 'user_id'
