@@ -1,5 +1,6 @@
 const path = require('path');
 const express = require('express');
+const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
@@ -15,7 +16,7 @@ const hbs = exphbs.create({ helpers });
 
 //cookies for session
 const sess = {
-    secret: 'Super secret secret',
+    secret: 'secret cookie monster',
     cookie: {
         maxAge: 300000,
         httpOnly: true,
