@@ -14,6 +14,16 @@ const seedAll = async () => {
     returning: true,
   });
 
+  await User.bulkCreate(blogPostData, {
+    individualHooks: true,
+    returning: true,
+  });
+
+  await User.bulkCreate(commentData, {
+    individualHooks: true,
+    returning: true,
+  });
+
 //   for (const project of projectData) {
 //     await Project.create({
 //       ...project,
