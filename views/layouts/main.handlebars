@@ -15,29 +15,39 @@
 </head>
 
 <body>
-    <header class="navbar">
+
+    <!--HEADER-->
+    <header class="navbar m-2 ">
         <section class="navbar-section">
             <a href="/" class="btn btn-link">HOME</a>
             <a href="/dashboard" class="btn btn-link">DASHBOARD</a>
-            {{#if logged_out}}
-            <a href="/login" class="btn btn-link" id="login">LOGIN</a>
-            {{/if}}
-            {{#if logged_in}}
-            <button class="btn" id="logout">LOGOUT</button>
-            {{/if}}
         </section>
         <section class="navbar-center">
             <h1>Tech Blog</h1>
         </section>
+        <section class="navbar-section">
+                <button href="/login" class="btn" id="login">LOGIN</button>
+            <!--{{#if logged_in}}
+                <button class="btn" id="logout">LOGOUT</button>
+            {{/if}}-->
+        </section>
     </header>
-    <main>
+
+    <!--MAIN-->
+    <main class="m-1">
         {{{body}}}
     </main>
+
+    <!--FOOTER-->
+    <footer>
+        <div class="bg-primary"></div>
+    </footer>
+
+
     <!--log out script linked-->
     {{#if logged_in}}
     <script src="/js/logout.js"></script>
     {{/if}}
 </body>
-
 
 </html>

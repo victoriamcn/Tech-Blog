@@ -1,0 +1,26 @@
+<!--POST-->
+<div class="">
+    <h3>{{title}}</h3>
+    <p>{{date_created}}</p>
+    <p>{{username}}</p>
+    <p>{{content}}</p>
+</div>
+
+<!--FORM TO LEAVE A COMMENT-->
+<div class="form-group">
+    <div class="has-icon-left">
+        <label class="form-label" for="comment">Type username:</label>
+        <input type="text" class="form-input" placeholder="...">
+        <i class="form-icon icon icon-check"></i>
+    </div>
+    <label class="form-label" for="comment">Write your comment:</label>
+    <textarea class="form-input" id="comment" placeholder="Write comment here. Please be kind with all critiques or disagreements" rows="3"></textarea>
+    <button class="btn btn-primary">Submit Comment</button>
+</div>
+
+<!--LIST OF COMMENTS-->
+<div class="">
+    <p>{{comment}}</p>
+    <p>{{date_created}}</p>
+    <p>{{username}}</p>
+</div>

@@ -41,10 +41,10 @@ const delButtonHandler = async (event) => {
     }
   };
 
-// document
-// .querySelector('.new-blogpost-form')
-// .addEventListener('submit', newFormHandler);
+document
+.querySelector('.new-blogpost-form')
+.addEventListener('submit', newFormHandler);
 
-// document
-//   .querySelector('.blogpost-list')
-//   .addEventListener('click', delButtonHandler);
+document
+  .querySelector('.blogpost-list')
+  .addEventListener('click', delButtonHandler);
