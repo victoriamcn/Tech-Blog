@@ -60,7 +60,7 @@ To contribute to this project, you may create a git fork.
 ## Questions
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) To view my other projects, you may visit my Git Hub profile: [victoriamcn](https://github.com/victoriamcn).
 
-![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white) To see my resume, please visit my LinkedIn profile: [Victoria McNorrill](https://www.linkedin.com/in/victoria-mcnorrill/)
+![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white) To contact me or see my resume, please visit my LinkedIn profile: [Victoria McNorrill](https://www.linkedin.com/in/victoria-mcnorrill/)
 
 ## License
 
