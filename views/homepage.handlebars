@@ -1,15 +1,17 @@
 <div>
     <h1>
-        Check out our 
+        Check out blog posts from the community!
     </h1>
 
-    <div>
-        <a href="/blogpost">{{#each blogPosts}}
-        <h1>
-            {{blogPosts}}
-        </h1>
-        {{/each}}
-        </a>
-
+    <div class="card">
+        <div class="card-header">
+            <a href="/blogpost">{{#each blogPosts}}
+                <div class="card-title h5">{{blogPosts}}</div>
+                {{/each}}
+            </a>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-primary">Read Post Here!</button>
+        </div>
     </div>
 </div>
