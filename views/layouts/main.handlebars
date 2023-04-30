@@ -17,7 +17,6 @@
 <body>
     <header class="navbar">
         <section class="navbar-section">
-            <h1 class="btn">Tech Blog</h1>
             <a href="/" class="btn btn-link">HOME</a>
             <a href="/dashboard" class="btn btn-link">DASHBOARD</a>
             {{#if logged_out}}
@@ -26,7 +25,9 @@
             {{#if logged_in}}
             <button class="btn" id="logout">LOGOUT</button>
             {{/if}}
-
+        </section>
+        <section class="navbar-center">
+            <h1>Tech Blog</h1>
         </section>
     </header>
     <main>
