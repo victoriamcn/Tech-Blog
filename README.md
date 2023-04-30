@@ -14,7 +14,7 @@ A CMS-style blog site similar to a Wordpress site, where developers can publish 
 - [Badges](#badges)
 
 ## Deployed Application
-
+[]()
 
 ## User Story
 ```
@@ -22,6 +22,7 @@ AS A developer who writes about tech
 I WANT a CMS-style blog site
 SO THAT I can publish articles, blog posts, and my thoughts and opinions
 ```
+
 ## Installation and Usage
 1. Clone this repository to your local computer.
 2. Open the repo in ```VS Code```.
@@ -56,11 +57,10 @@ DB_USER='example'
 ## Contributing
 To contribute to this project, you may create a git fork.
 
-
 ## Questions
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) To view my other projects, you may visit my Git Hub profile: [victoriamcn](https://github.com/victoriamcn).
 
-![LinkedIn](![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)) To see my resume, please visit my LinkedIn profile: [Victoria McNorrill](https://www.linkedin.com/in/victoria-mcnorrill/)
+![LinkedIn](![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white) To see my resume, please visit my LinkedIn profile: [Victoria McNorrill](https://www.linkedin.com/in/victoria-mcnorrill/)
 
 ## License
 
@@ -76,7 +76,10 @@ This project is licensed under MIT.
 
 ### Example Code
 
+I based most of my code on the Module 14: Model-View-Controller (MVC) Mini-Project in the Georgia Tech Boot Camp.
+
 ### Tutorials
+- StackOverflow: [TypeError: app.use() requires middleware functions](https://stackoverflow.com/questions/32883626/typeerror-app-use-requires-middleware-functions)
 
 ## Badges
 
