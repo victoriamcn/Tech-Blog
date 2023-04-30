@@ -38,9 +38,8 @@ DB_USER='example'
 ```
 6. **Install all dependencies:** type the following in the command line: ```npm i```.
 7. **Create the SQL database locally** [Refer to this documentation to get started:](https://dev.mysql.com/doc/mysql-getting-started/en/). This covers installation for both Windows and MacOS.
-8. ***Optional*** **Seed the database** type the following in the command line: ```npm run seed```.
-9. 
-10. 
+8. ***Optional*** **Seed the database:** type the following in the command line: ```npm run seed```.
+9. **Start the server:** type the following in the command line: ```npm start```.
 
 ## MVC Paradigm
 - Model: [mysql2](https://www.npmjs.com/package/mysql2) packages to connect to a MySQL database.
