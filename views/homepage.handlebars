@@ -1,17 +1,15 @@
 <div>
-    <h1>
+    <h2>
         Check out blog posts from the community!
-    </h1>
-
-    <div class="card">
-        <div class="card-header">
-            <a href="/blogpost">{{#each blogPosts}}
-                <div class="card-title h5">{{blogPosts}}</div>
-                {{/each}}
-            </a>
-        </div>
-        <div class="card-footer">
-            <button class="btn btn-primary">Read Post Here!</button>
-        </div>
-    </div>
+    </h2>
 </div>
+<div class="card">{{#each blogPosts as |post|}}
+    <div class="card-header">
+        <div class="card-title h5">{{post.title}}</div>
+        <div class="card-subtitle text-gray">{{post.user_id}}</div>
+    </div>
+    <div class="card-body">{{post.content}}</div>
+    <div class="card-footer">
+        <a href="/blogpost"></a><button class="btn btn-primary">Read Post Here!</button></a>
+    </div>
+</div>{{/each}}
