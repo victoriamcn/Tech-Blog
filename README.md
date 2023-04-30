@@ -32,13 +32,13 @@ SO THAT I can publish articles, blog posts, and my thoughts and opinions
 - Add new file called ```.env```
 - Use following syntax in your ```.env``` file with your ```MySQL``` username and password instead of ```example```:
 ```
-DB_NAME='ecommerce_db'
+DB_NAME='techblog_db'
 DB_PASSWORD='example'
 DB_USER='example'
 ```
 6. **Install all dependencies:** type the following in the command line: ```npm i```.
-7. 
-8. 
+7. **Create the SQL database locally** [Refer to this documentation to get started:](https://dev.mysql.com/doc/mysql-getting-started/en/). This covers installation for both Windows and MacOS.
+8. ***Optional*** **Seed the database** type the following in the command line: ```npm run seed```.
 9. 
 10. 
 
