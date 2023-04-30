@@ -2,27 +2,22 @@ const router = require('express').Router();
 const { User, BlogPost, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
-// // HOMEPAGE GET REQUEST
-// router.get("/", async (req, res)=>{
+// HOMEPAGE GET REQUEST
+router.get("/", async (req, res)=>{
+  try {
+    const getUsers = await User.findAll()
+    const realData = getUsers.map((user)=>user.get({plain:true}))
+    //an array of all users
+    console.log(realData)
+    res.render("homepage", {
+      realData
+    })
+  } catch (e){
+    console.log(e);
+    res.status(500).json(e)
+}
 
-// try{
-//   const getUsers = await User.findAll()
-//   const realData = getUsers.map((user)=>user.get({plain:true}))
-//   //an array of all users
-//   console.log(realData)
-//   res.render("homepage", {
-//     realData
-//   })
-// }catch (e){
-//   console.log(e);
-//   res.status(500).json(e)
-// }
-
-// })
-// router.get("/profile", async (req, res)=>{
-//   res.render("profile")
-//   })
-
+})
 
 router.get('/', withAuth, async (req, res) => {
     try {
@@ -85,7 +80,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
       // Find the logged in user based on the session ID
       const userData = await User.findByPk(req.session.user_id, {
         attributes: { exclude: ['password'] },
-        include: [{ model: Project }],
+        include: [{ model: blogpost }],
       });
   
       const user = userData.get({ plain: true });
@@ -101,16 +96,16 @@ router.get('/dashboard', withAuth, async (req, res) => {
 
   });
 
+  //GET LOGIN 
+router.get('/login', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
 
-  router.get('/login', (req, res) => {
-    if (req.session.loggedIn) {
-      res.redirect('/');
-      return;
-    }
-  
-    res.render('login');
-    console.log("Login GET Request")
+  res.render('login');
+  console.log("Login GET Request")
 
-  });
+});
   
   module.exports = router;
