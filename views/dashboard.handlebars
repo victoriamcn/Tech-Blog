@@ -2,18 +2,49 @@
     <h2>Welcome, {{username}}</h2>
 </div>
 
-  {{#if blogPosts.length}}
+<!--FORM TO CREATE NEW POSTS-->
+<div>
+    <h3>Create a New Post:</h3>
+    <form class="form-horizontal">
+        <div class="form-group">
+            <!--TITLE-->
+            <div class="col-3 col-sm-12">
+                <label class="form-label" for="title">Title:</label>
+            </div>
+            <div class="col-9 col-sm-12">
+                <input class="form-input" type="text" id="title">
+            </div>
+            <!--CONTENT-->
+            <div class="col-3 col-sm-12">
+                <label class="form-label" for="content">Content:</label>
+            </div>
+            <div class="col-9 col-sm-12">
+                <input class="form-input" type="text" id="content">
+            </div>
+        </div>
+    </form>
+</div>
+
+<!--LIST OF POSTS BY THE USER-->
+{{#if blogPosts.length}}
 <div class="card">
-{{#each blogPosts as |post|}}
+    {{#each blogPosts as |post|}}
     <div class="card-header">
         <div class="card-title h5">{{post.title}}</div>
         <div class="card-subtitle text-gray">{{post.user_id}}</div>
     </div>
     <div class="card-body">{{post.content}}</div>
     <div class="card-footer">
-        <a href="/blogpost"></a><button class="btn btn-primary">Read Post Here!</button></a>
+        <!--SEE MORE BUTTON-->
+        <a href="/blogpost">
+            <button class="btn btn-primary">Read Post Here!</button>
+        </a>
+        <!--DELETE BUTTON-->
+        <div>
+            <button class="btn btn-sm btn-danger" data-id="{{post.id}}">DELETE</button>
+        </div>
     </div>
-{{/each}}
+    {{/each}}
 </div>
 {{/if}}
 <script src="../public/js/dashboard.js"></script>
