@@ -91,7 +91,7 @@ I based most of my code on the Module 14: Model-View-Controller (MVC) Mini-Proje
 ### Frameworks and Libraries
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 ![Handlebars.js](https://img.shields.io/badge/Handlebars.js-f0772b?style=for-the-badge&logo=handlebarsdotjs&logoColor=black)
-![Spectre.css](https://img.shields.io/badge/shields.io-Spectre.css-purple)
+![Spectre.css](https://img.shields.io/badge/CSS-Spectre.css-purple)
 ![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
