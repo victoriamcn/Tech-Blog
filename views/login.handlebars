@@ -1,6 +1,6 @@
 <div class="columns m-2">
     <!--LOGIN FORM-->
-    <div class="column login-form">
+    <form class="column login-form">
         <div class="form-group">
             <h2>Login:</h2>
             <div class="input-group">
@@ -10,13 +10,13 @@
             <div class="input-group">
                 <span class="input-group-addon password-login">Enter Password:</span>
                 <input class="form-input password-login" type="text" id="password-login"/>
-                <button class="btn btn-primary input-group-btn login-btn">Login</button>
+                <button class="btn btn-primary input-group-btn login-btn submit">Login</button>
             </div>
         </div>
-    </div>
+    </form>
     <div class="divider-vert" data-content="OR"></div>
     <!--SIGN-UP FORM-->
-    <div class="column signup-form">
+    <form class="column signup-form">
         <div class="form-group">
             <h2>Sign-Up Below:</h2>
             <div class="input-group">
@@ -26,10 +26,10 @@
             <div class="input-group">
                 <span class="input-group-addon createpassword">Create Password:</span>
                 <input class="form-input password-login" type="text" id="createpassword" />
-                <button class="btn btn-primary input-group-btn sign-up-btn">Sign Up!</button>
+                <button class="btn btn-primary input-group-btn sign-up-btn submit">Sign Up!</button>
             </div>
         </div>
-    </div>
+    </form>
 </div>
 <!--CONNECTING LOGIN.JS-->
 <script src="/js/login.js"></script>
