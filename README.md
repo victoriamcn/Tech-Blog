@@ -62,7 +62,7 @@ To contribute to this project, you may create a git fork.
 ![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white) To contact me or see my resume, please visit my LinkedIn profile: [Victoria McNorrill](https://www.linkedin.com/in/victoria-mcnorrill/)
 
 ## License
-
+[MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 This project is licensed under MIT.
 - [Click](https://pitt.libguides.com/openlicensing/MIT#:~:text=Users%20of%20software%20using%20an,and%20the%20X%20Windows%20System.) here to view the license documentation or,
 - Go to the [license file](https://github.com/victoriamcn/Tech-Blog/blob/main/LICENSE) with in this repository.
@@ -91,6 +91,7 @@ I based most of my code on the Module 14: Model-View-Controller (MVC) Mini-Proje
 ### Frameworks and Libraries
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 ![Handlebars.js](https://img.shields.io/badge/Handlebars.js-f0772b?style=for-the-badge&logo=handlebarsdotjs&logoColor=black)
+![Spectre.css](https://img.shields.io/badge/shields.io-Spectre.css-purple)
 ![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
