@@ -1,10 +1,12 @@
 const loginFormHandler = async (event) => {
     event.preventDefault();
-  
+
+  // Collect values from the login form
     const username = document.querySelector('#username-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
   
-    if (email && password) {
+    if (username && password) {
+      // Send a POST request to the API endpoint
       const response = await fetch('/api/users/login', {
         method: 'POST',
         body: JSON.stringify({ username, password }),
@@ -12,13 +14,37 @@ const loginFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/');
+        // If successful, redirect the browser to the dashboard page
+        document.location.replace('/dashboard');
       } else {
         alert('Failed to log in');
       }
     }
   };
+  const signupFormHandler = async (event) => {
+    event.preventDefault();
   
-  document
-    .querySelector('.login-form')
-    .addEventListener('login-btn', loginFormHandler);
+    const username = document.querySelector('#username-signup').value.trim();
+    const password = document.querySelector('#password-signup').value.trim();
+  
+    if (username && password) {
+      const response = await fetch('/api/users', {
+        method: 'POST',
+        body: JSON.stringify({ username, password }),
+        headers: { 'Content-Type': 'application/json' },
+      });
+  
+      if (response.ok) {
+        document.location.replace('/dashboard');
+      } else {
+        alert(response.statusText);
+      }
+    }
+  };
+
+// LOG-IN EVENT LISTENER
+document.querySelector('.login-form').addEventListener('login-btn', loginFormHandler);
+
+document
+  .querySelector('.signup-form')
+  .addEventListener('sign-up-btn', signupFormHandler);

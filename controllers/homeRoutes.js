@@ -2,22 +2,21 @@ const router = require('express').Router();
 const { User, BlogPost, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
-// HOMEPAGE GET REQUEST
-router.get("/", async (req, res)=>{
-  try {
-    const getUsers = await User.findAll()
-    const realData = getUsers.map((user)=>user.get({plain:true}))
-    //an array of all users
-    console.log(realData)
-    res.render("homepage", {
-      realData
-    })
-  } catch (e){
-    console.log(e);
-    res.status(500).json(e)
-}
-
-})
+// // GET ALL USERS
+// router.get("/", async (req, res)=>{
+//   try {
+//     const getUsers = await User.findAll()
+//     const realData = getUsers.map((user)=>user.get({plain:true}))
+//     //an array of all users
+//     console.log(realData)
+//     res.render("homepage", {
+//       realData
+//     })
+//   } catch (e){
+//     console.log(e);
+//     res.status(500).json(e)
+//  }
+// })
 
 router.get('/', withAuth, async (req, res) => {
     try {
@@ -45,7 +44,7 @@ router.get('/', withAuth, async (req, res) => {
     console.log("Homepage GET Request")
   });
 
-  // GET one blogpost with id
+// GET one blogpost with id
 router.get('/blogpost/:id', withAuth, async (req, res) => {
     try {
       const blogpostData = await BlogPost.findByPk(req.params.id, {
@@ -80,7 +79,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
       // Find the logged in user based on the session ID
       const userData = await User.findByPk(req.session.user_id, {
         attributes: { exclude: ['password'] },
-        include: [{ model: blogpost }],
+        include: [{ model: BlogPost }],
       });
   
       const user = userData.get({ plain: true });
@@ -93,19 +92,19 @@ router.get('/dashboard', withAuth, async (req, res) => {
       res.status(500).json(err);
     }
     console.log("Dashboard GET Request")
-
   });
 
   //GET LOGIN 
 router.get('/login', (req, res) => {
+  // If the user is already logged in,
+  // redirect the request to another route
   if (req.session.loggedIn) {
-    res.redirect('/');
+    res.redirect('/dashboard');
     return;
   }
 
   res.render('login');
   console.log("Login GET Request")
-
 });
   
   module.exports = router;
