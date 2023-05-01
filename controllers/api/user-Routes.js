@@ -12,7 +12,9 @@ router.get("/", async (req, res)=>{
 })
 
 // CREATE new user - Sign up
-router.post('/login', async (req, res) => {
+//api/users/signup
+
+router.post('/signup', async (req, res) => {
   try {
     const dbUserData = await User.create({
       username: req.body.username,
@@ -33,6 +35,8 @@ router.post('/login', async (req, res) => {
 });
 
 // Login
+//api/users/login
+
 router.post('/login', async (req, res) => {
   try {
     const dbUserData = await User.findOne({
@@ -73,6 +77,7 @@ router.post('/login', async (req, res) => {
 });
 
 // Logout
+//api/users/logout
 router.post('/logout', (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
