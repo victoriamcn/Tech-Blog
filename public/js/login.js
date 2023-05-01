@@ -1,7 +1,5 @@
-// LOG-IN EVENT LISTENER
-let loginBtn = document.querySelector('login-btn');
-
-loginBtn.addEventListener('click', async function (event){
+// LOGIN FUNCTION
+const loginFormHandler = async (event) => {
   event.preventDefault();
 
   // Collect values from the login form
@@ -23,12 +21,10 @@ loginBtn.addEventListener('click', async function (event){
       alert('Failed to log in');
     }
   }
-});
+};
 
-// SIGN-UP EVENT LISTENER
-let signUpBtn = document.querySelector('sign-up-btn');
-
-signUpBtn.addEventListener('click', async function (event) {
+//SIGNUP FUNCTION
+const signupFormHandler = async (event) => {
   event.preventDefault();
 
   const username = document.querySelector('#username-signup').value.trim();
@@ -47,4 +43,15 @@ signUpBtn.addEventListener('click', async function (event) {
       alert(response.statusText);
     }
   }
-});
+};
+
+// LOG-IN EVENT LISTENER
+document
+  .querySelector('.login-btn')
+  .addEventListener('click', loginFormHandler);
+
+
+// SIGN-UP EVENT LISTENER
+document
+  .querySelector('sign-up-btn')
+  .addEventListener('click', signupFormHandler);
