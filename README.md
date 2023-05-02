@@ -71,14 +71,17 @@ This project is licensed under MIT.
 
 ### Georgia Tech Staff
 - My instructor, [Saurav Khatiwada](https://github.com/khatiwadasaurav).
-- My tutors, !!!!!!!! .
+- My tutor, Juan Delgado.
 
 ### Example Code
 
-I based most of my code on the Module 14: Model-View-Controller (MVC) Mini-Project in the Georgia Tech Boot Camp.
+- I based my code on the Module 14: Model-View-Controller (MVC) Mini-Project in the Georgia Tech Boot Camp.
 
 ### Tutorials
 - StackOverflow: [TypeError: app.use() requires middleware functions](https://stackoverflow.com/questions/32883626/typeerror-app-use-requires-middleware-functions)
+- The Full-Stack Blog: [Deploy with Heroku and MySQL](https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql)
+- The Vanilla JS Toolkit: [Element.addEventListener()](https://vanillajstoolkit.com/reference/event-listeners/addeventlistener/)
+- YouTube: [Deploying to Heroku with Sequelize and JawsDB](https://www.youtube.com/watch?v=AQp7b-1356k)
 
 ## Badges
 
