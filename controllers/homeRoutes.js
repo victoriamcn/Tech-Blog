@@ -2,21 +2,7 @@ const router = require('express').Router();
 const { User, BlogPost, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
-// // GET ALL USERS
-// router.get("/", async (req, res)=>{
-//   try {
-//     const getUsers = await User.findAll()
-//     const realData = getUsers.map((user)=>user.get({plain:true}))
-//     //an array of all users
-//     console.log(realData)
-//     res.render("homepage", {
-//       realData
-//     })
-//   } catch (e){
-//     console.log(e);
-//     res.status(500).json(e)
-//  }
-// })
+
 
 router.get('/', withAuth, async (req, res) => {
     try {
@@ -60,7 +46,8 @@ router.get('/blogpost/:id', withAuth, async (req, res) => {
             ],
           },
           {
-            mode
+            model: User, // Add the correct model to include here
+            attributes: ['username'],
           }
         ],
       });
@@ -102,8 +89,9 @@ router.get('/login', (req, res) => {
     res.redirect('/dashboard');
     return;
   }
-  res.render('login');
+
   console.log("Login GET Request")
+  res.render('login');
 });
   
   module.exports = router;
