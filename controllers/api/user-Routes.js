@@ -1,13 +1,13 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
-router.get("/", async (req, res)=>{
-  try{
+router.get("/", async (req, res) => {
+  try {
     const usersInfo = await User.findAll()
     res.status(200).json(usersInfo)
-  }catch (e){
+  } catch (e) {
     console.log(e)
-    res.status(500).json(e)
+    res.status(500).json({ error: 'An error occurred while retrieving user information.' });
   }
 })
 
@@ -16,7 +16,18 @@ router.get("/", async (req, res)=>{
 //api/users/signup
 
 router.post('/signup', async (req, res) => {
+  // check for existing users/usernames to reduce duplicates
   try {
+    const existingUser = await User.findOne({
+      where: {
+        username: req.body.username,
+      },
+    });
+
+    if (existingUser) {
+      return res.status(400).json({ message: 'Username is already taken.' });
+    }
+
     const dbUserData = await User.create({
       username: req.body.username,
       password: req.body.password,
@@ -29,7 +40,7 @@ router.post('/signup', async (req, res) => {
     });
   } catch (err) {
     console.log(err);
-    res.status(500).json(err);
+    res.status(500).json({ error: 'An error occurred while creating a new user.' });
   }
   console.log("New User POST Request")
 
