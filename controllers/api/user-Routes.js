@@ -12,11 +12,8 @@ router.get("/", async (req, res)=>{
 })
 
 // CREATE new user - Sign up
-//api/users/signup
 
-router.get(
-  
-)
+//api/users/signup
 
 router.post('/signup', async (req, res) => {
   try {
