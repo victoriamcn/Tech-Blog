@@ -14,6 +14,10 @@ router.get("/", async (req, res)=>{
 // CREATE new user - Sign up
 //api/users/signup
 
+router.get(
+  
+)
+
 router.post('/signup', async (req, res) => {
   try {
     const dbUserData = await User.create({
