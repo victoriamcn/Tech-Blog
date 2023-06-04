@@ -9,34 +9,28 @@
             </div>
             <div class="input-group">
                 <span class="input-group-addon password-login">Enter Password:</span>
-                <input class="form-input password-input password-login" type="text" id="password-login" />
+                <input class="form-input password-input password-login" type="password" id="password-login" />
                 <button class="btn btn-primary input-group-btn login-btn submit">Login</button>
-            </div>
-            <div class="showpw">
-                <input type="checkbox" class="password" onclick="passwordFunction()"> Show Password
             </div>
         </div>
     </form>
     <div class="divider-vert" data-content="OR"></div>
     <!--SIGN-UP FORM-->
     <form class="column signup-form">
-        <div class="form-group">
-            <h2>Sign-Up Below:</h2>
-            <div class="input-group">
-                <span class="input-group-addon username-signup">Create Username:</span>
-                <input class="form-input username-login" type="text" id="username-signup" />
+        <form class="column signup-form">
+            <div class="form-group">
+                <h2>Sign-Up Below:</h2>
+                <div class="input-group">
+                    <span class="input-group-addon username-signup">Create Username:</span>
+                    <input class="form-input username-login" type="password" id="username-signup" />
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon password-signup">Create Password:</span>
+                    <input class="form-input password-input" type="password" id="password-signup" />
+                    <button class="btn btn-primary input-group-btn sign-up-btn submit">Sign Up!</button>
+                </div>
             </div>
-            <div class="input-group">
-                <span class="input-group-addon password-signup">Create Password:</span>
-                <input class="form-input password-input password-login" type="text" id="password-signup" />
-                <button class="btn btn-primary input-group-btn sign-up-btn submit">Sign Up!</button>
-            </div>
-            <div class="showpw">
-                <input type="checkbox" class="password" onclick="passwordFunction()"> Show Password
-
-            </div>
-        </div>
-    </form>
+        </form>
 </div>
 <!--CONNECTING LOGIN.JS-->
 <script src="./js/login.js"></script>
