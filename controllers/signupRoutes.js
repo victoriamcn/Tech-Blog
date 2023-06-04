@@ -11,7 +11,7 @@ router.post("/", async (req, res) => {
             }
         }).then(async (result) => {
             if (result !== null) {
-                res.render("register", { error: "User already exists. Please try registering with a new username", title: "Register - TechBlog" })
+                res.render("register", { error: "User already exists. Please try a new username", title: "Register - TechBlog" })
             } else {
                 const salt = await bcrypt.genSalt(10)
                 await bcrypt.hash(req.body.password, salt).then(function (hash) {
@@ -20,11 +20,10 @@ router.post("/", async (req, res) => {
                         password: hash
                     })
                 })
-                res.render("login", { message: "Successfully registered. Please log in.", title: "Login - TechBlog" });
+                res.render("login", { message: "Signup successful. Please log in.", title: "Login - TechBlog" });
             }
         })
     } catch (err) {
-        //console.log(req.body.ethnicity)
         console.log(err);
         res.send(err)
     }
