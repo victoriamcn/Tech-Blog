@@ -16,8 +16,7 @@ router.post("/", async (req, res) => {
                 const salt = await bcrypt.genSalt(10)
                 await bcrypt.hash(req.body.password, salt).then(function (hash) {
                     User.create({
-                        usr_name: req.body.usr_name,
-                        email: req.body.email,
+                        username: req.body.username,
                         password: hash
                     })
                     Employee.create({

@@ -1,5 +1,5 @@
-function passwordSignUpFunction() {
-  let passwordInput = document.getElementById("password-signup");
+function passwordFunction() {
+  let passwordInput = document.getElementById("password");
 
   if (passwordInput.type === "password") {
     passwordInput.type = "text";
@@ -7,14 +7,4 @@ function passwordSignUpFunction() {
     passwordInput.type = "password";
   }
 
-}
-
-function passwordLoginFunction() {
-  let passwordInput = document.getElementById("password-login");
-
-  if (passwordInput.type === "password") {
-    passwordInput.type = "text";
-  } else {
-    passwordInput.type = "password";
-  }
 }

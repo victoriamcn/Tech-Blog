@@ -6,21 +6,26 @@
         </div>
         <form action="./login" method="POST" class="loginform">
             <!-- Username field -->
-            <label class="input-group-addon username-login">Enter Username:</label>
-            <input class="form-input username-login" type="text" id="username-login" />
+            <label class="input-group-addon login">Enter Username:</label>
+            <input class="form-input login" type="text" id="username" />
 
-            <label class="input-group-addon password-login">Enter Password:</label>
+            <label class="input-group-addon login">Enter Password:</label>
             <!-- Password field -->
-            <input class="form-input password-input password-login" type="password" id="password-login" />
-            <a href="/dashboard"><button class="btn btn-primary input-group-btn login-btn submit">Login</button></a>
+            <input class="form-input password-input login" type="password" id="password" />
             <!-- An element to toggle between password visibility -->
-            <label class="form-switch">
-                <input type="checkbox" onclick="passwordLoginFunction()">
+            <label class="form-switch login">
+                <input type="checkbox" onclick="passwordFunction()">
                 <i class="form-icon"></i> Show Password
             </label>
         </form>
+        <!--LOGIN BUTTON-->
+        <a href="/dashboard">
+            <button class="btn btn-primary input-group-btn login-btn submit">Login</button>
+        </a>
     </div>
+    <!--DIVIDER-->
     <div class="divider-vert" data-content="OR"></div>
+
     <!--SIGN-UP LINK-->
     <div class="column">
         <div class="header">
