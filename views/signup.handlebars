@@ -1,0 +1,27 @@
+<!--SIGN-UP FORM-->
+<form class="column signup-form">
+    <div class="form-group">
+        <h2>Sign-Up Below:</h2>
+        <div class="input-group">
+            <!-- Username field -->
+            <span class="input-group-addon username-signup">Create Username:</span>
+            <input class="form-input username-login" type="text" id="username-signup" />
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon password-signup">Create Password:</span>
+            <!-- Password field -->
+            <input class="form-input password-input" type="password" id="password-signup" />
+            <button class="btn btn-primary input-group-btn sign-up-btn submit">Sign Up!</button>
+            <!-- An element to toggle between password visibility -->
+            <label class="form-switch">
+                <input type="checkbox" onclick="passwordSignUpFunction()">
+                <i class="form-icon"></i> Show Password
+            </label>
+        </div>
+    </div>
+</form>
+
+<!--CONNECTING LOGIN.JS-->
+<script src="./js/login.js"></script>
+<!--CONNECTING PASSWORD.JS-->
+<script src="../utils/password.js"></script>

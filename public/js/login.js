@@ -15,10 +15,26 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      // If successful, redirect the browser to the dashboard page
-      document.location.replace('/dashboard');
+      // Check if the user is already logged in
+      const loggedInResponse = await fetch('/api/users/checkLoggedIn');
+      const loggedInData = await loggedInResponse.json();
+      
+      if (loggedInData.loggedIn) {
+        // If the user is already logged in, redirect to the dashboard
+        document.location.replace('/dashboard');
+      } else {
+        // Otherwise, redirect to the login page
+        document.location.href = '/dashboard';
+      }
     } else {
-      alert('Failed to log in');
+      const errorMessage = await response.text();
+      alert(errorMessage || 'Failed to log in');
+    }
+
+    if (err.response && err.response.status === 400) {
+      alert(err.response.data.message);
+    } else {
+      alert('An error occurred while logging in.');
     }
   }
 };
@@ -30,6 +46,11 @@ const signupFormHandler = async (event) => {
   const username = document.querySelector('#username-signup').value.trim();
   const password = document.querySelector('#password-signup').value.trim();
 
+  if (password.length < 6) {
+    alert('Password must be at least 6 characters long');
+    return;
+  }
+
   if (username && password) {
     const response = await fetch('/api/users/signup', {
       method: 'POST',
@@ -38,9 +59,26 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/dashboard');
+      // Check if the user is already logged in
+      const loggedInResponse = await fetch('/api/users/checkLoggedIn');
+      const loggedInData = await loggedInResponse.json();
+      
+      if (loggedInData.loggedIn) {
+        // If the user is already logged in, redirect to the dashboard
+        document.location.href = '/dashboard';
+      } else {
+        // Otherwise, redirect to the login page
+        document.location.replace('/login');
+      }
     } else {
-      alert(response.statusText);
+      const errorMessage = await response.text();
+      alert(errorMessage || 'Failed to log in');
+    }
+
+    if (err.response && err.response.status === 400) {
+      alert(err.response.data.message);
+    } else {
+      alert('An error occurred while logging in.');
     }
   }
 };
