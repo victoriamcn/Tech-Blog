@@ -19,11 +19,6 @@ router.post("/", async (req, res) => {
                         username: req.body.username,
                         password: hash
                     })
-                    Employee.create({
-                        // info goes here for employee
-                        id: req.body.id,
-                        username: req.body.first_name,
-                    })
                 })
                 res.render("login", { message: "Successfully registered. Please log in.", title: "Login - TechBlog" });
             }
